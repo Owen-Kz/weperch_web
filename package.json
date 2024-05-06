@@ -1,0 +1,27 @@
+{
+  "name": "weperch_web",
+  "version": "1.0.0",
+  "description": "Web based application for the weperch marketplace",
+  "main": "app.js",
+  "scripts": {
+    "test": "test",
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "Weperch",
+    "Video",
+    "Commerce"
+  ],
+  "author": "Bensonm Michael Owen, Michael A. Olufunsho",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0",
+    "socket.io": "^4.7.5",
+    "vercel": "^34.1.8"
+  }
+}
