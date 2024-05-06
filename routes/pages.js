@@ -7,7 +7,7 @@ const bodyParser = require("body-parser")
 // router.use(express.json())
 // router.use(bodyParser.json())
 
-router.get("/home", (req,res) =>{    
+router.get("/", (req,res) =>{    
     res.render("home")
 })
 

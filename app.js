@@ -5,11 +5,11 @@ const bodyParser = require('body-parser')
 const portN = process.env.PORT
 
 const app = express()
-const server = require("http").Server(app)
+// const server = require("http").Server(app)
 const cookie = require("cookie-parser");
-const io = require("socket.io")(server, {
-    port: 1487 // Change this to your desired port number
-})
+// const io = require("socket.io")(server, {
+//     port: 1487 // Change this to your desired port number
+// })
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -26,8 +26,8 @@ app.set("views", ["./views"]);
 app.use("/", require("./routes/pages"))
 
 
-server.listen(portN)
+app.listen(portN)
 console.log(`Server running on ${portN}`)
 
-module.exports = server
-module.exports = io
+module.exports = app
+// module.exports = io
