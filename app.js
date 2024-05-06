@@ -1,6 +1,6 @@
 const express = require('express')
 const dotenv = require("dotenv").config();
-
+const path = require('path');
 const bodyParser = require('body-parser')
 const portN = process.env.PORT
 
@@ -20,8 +20,8 @@ app.use(express.json());
 
 // connectToDatabase()
 // io.on('connection', onConnected);
-
-app.set("view engine", "ejs");
+app.set('views', path.join(__dirname, 'views'))
+// app.set("view engine", "ejs");
 app.set("views", ["./views"]);
 app.use("/", require("./routes/pages"))
 
