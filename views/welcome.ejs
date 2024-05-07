@@ -5,7 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    Welcome, We Perch Web
+<style>
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+.body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.layers{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+}
+
+.layerOne{
+    background-color: red;
+}
+
+.layerTwo{
+    background-color: yellow;
+}
+</style>
+<body class="body">
+    <div class="layers layerOne">
+        <a href="#layerTwo">Next PAge</a>
+    </div>
+
+    <div class="layers layerTwo" id="layerTwo">
+        Layertwo
+    </div>
 </body>
 </html>
