@@ -24,6 +24,22 @@ app.set("view engine", "ejs");
 
 app.set('views', path.join(__dirname, 'views'))
 // app.set("views", ["./views"]);
+
+app.use("/css", express.static(__dirname + "/public/css", { type: 'text/css' }))
+app.use("/js", express.static(__dirname + "/public/js", { type: 'text/javascript' }))
+app.use("/vendor", express.static(__dirname + "/public/vendor", {type: 'text/javacript'}))
+app.use("/js/bootstrap", express.static(__dirname + "/public/js/bootstrap/dist/js", {type:"text/javascript"}))
+
+// app.use("/css/icons/font-awesome/css/", express.static(__dirname + "/public/css/icons/font-awesome/css/", {type : 'text/css'}))
+app.use("/files", express.static(__dirname + "/public/files", {type: 'text/folder'}))
+app.use("/files/images", express.static(__dirname + "/public/files/images", {type: 'file/image'}))
+app.use("/userUploads/Audio", express.static(__dirname + "/public/userUpload/audio", {type:'file/media'}))
+app.use("/userUploads/Videos", express.static(__dirname + "/public/userUpload/videos", {type:'file/media'}))
+app.use("/userUploads/profileImages", express.static(__dirname + "/public/userUpload/profilePhotos", {type:'file/images'}))
+app.use("/userUploads/profileCovers", express.static(__dirname +"/public/userUpload/profileCovers", {type:'file/images'}))
+// app.use("/userUploads/spaceCovers", express.static(__dirname +"/public/userUpload/spaceCovers", {type:'file/images'}))
+
+
 app.use("/", require("./routes/pages"))
 
 
