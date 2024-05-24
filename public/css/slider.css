@@ -1,123 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Roboto:wght@300;400;500;700&display=swap");
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-nav {
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-}
-
-nav ul,
-nav ul li {
-  outline: 0;
-}
-
-nav ul li a {
-  text-decoration: none;
-}
-
-img {
-  width: 100%;
-}
-
-h1 {
-  font-size: clamp(1.2rem, 3vw, 1.5rem);
-}
-
-body {
-  font-family: "Nunito", sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background-image: url(https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/aa462558-0106-4268-9864-d34a4f35531f);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* MAIN MENU */
-
-main {
-  display: grid;
-  grid-template-columns: 11% 89%;
-  width: 95%;
-  margin: 40px;
-  background: rgba(16, 21, 61, 0.5);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 15px;
-  box-shadow: 0 0.5px 0 1px rgba(255, 255, 255, 0.23) inset,
-    0 1px 0 0 rgba(255, 255, 255, 0.6) inset, 0 4px 16px rgba(0, 0, 0, 0.12);
-  z-index: 10;
-}
-
-.main-menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-radius: 15px 0 0 15px;
-  border-right: 1px solid rgba(255, 255, 255, 0.5);
-  padding: 12px 0 20px;
-  overflow: hidden;
-  font-family: inherit;
-}
-
-.user-info img {
-  padding: 12px 24px 6px;
-  border-radius: 50%;
-}
-
-.user-info p {
-  color: #fff;
-  font-size: clamp(0.8rem, 3vw, 1rem);
-  font-weight: 500;
-  text-align: center;
-  line-height: 1;
-  padding: 0 6px 32px;
-}
-
-.nav-item {
-  display: block;
-}
-
-.nav-item a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 1rem;
-  padding: 12px 0;
-  margin: 0 8px;
-  border-radius: 5px;
-}
-
-.nav-item.active a {
-  background: rgba(106, 109, 155, 0.5);
-  text-decoration: none;
-}
-
-.nav-icon {
-  width: 40px;
-  height: 20px;
-  font-size: 1.1rem;
-}
-
-.nav-text {
-  display: block;
-  width: 70px;
-  height: 20px;
-  letter-spacing: 0;
-}
 
 /* CONTENT */
 
@@ -130,7 +11,8 @@ main {
 
 .left-content {
   padding: 30px 20px;
-  color: #e5e5e5;
+  background-color: transparent;
+  /* color: #e5e5e5; */
 }
 
 /* SLIDER */
@@ -148,14 +30,19 @@ main {
 
 .swiper-slide {
   position: relative;
-  width: 600px;
+  width: 50%;
 }
 
-.swiper-slide img {
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
   border-radius: 20px;
-  height: 300px;
+  height: 90%;
+  background-color: beige;
   object-fit: cover;
-  border: 2px solid rgba(159, 160, 168, 0.5);
+  width: 300px;
+  box-shadow: 0px 10px 15px 4px rgba(0,0,0,0.1);
+  /* border: 2px solid rgba(159, 160, 168, 0.5); */
 }
 
 .swiper-pagination {
@@ -232,7 +119,7 @@ main {
   display: flex;
   align-items: center;
   padding: 0 0 12px;
-  overflow-x: auto;
+  /* overflow-x: auto; */
   cursor: grab;
 }
 
@@ -567,6 +454,82 @@ main {
   transform: scale(1.25);
 }
 
+
+/* Custom for the weperch layout  */
+.slide_top{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  padding: 8px;
+  height: 20px;
+  margin-top:6px
+}
+.slider_top_nav{
+  display: flex;
+}
+.slide_top_text{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 90%;
+  justify-content: space-around;
+}
+
+.video_frames{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100px;
+  margin-top: 6px;
+  width: inherit;
+  overflow: hidden;
+  padding: 10px;
+  /* justify-content: space-between; */
+}
+
+.video_frames .box{
+  display: flex;
+  width: 80px;
+  height: 80px;
+  background-color: #333;
+  border-radius: 8px;
+}
+
+.video_frames .box:not(:first-child){
+  margin-left: 15px;
+}
+
+.slider_main_container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  align-self: center;
+  border-radius: 8px;
+  height: 70%;
+  background-color:#333;
+}
+.slider_main_image{
+  transform: scale(0.4);
+  /* margin-left: -30px; */
+  /* margin: auto; */
+}
+
+.slider_footer{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  align-self: flex-end;
+  bottom: 0;
+  background-image: url("../assets/av.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* position: sticky; */
+  margin-top: 10px;
+}
 /* MEDIA QUERIES */
 
 @media (max-width: 1500px) {
