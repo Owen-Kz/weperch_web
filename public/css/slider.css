@@ -1,7 +1,9 @@
 
 
 /* CONTENT */
-
+:root{
+  --box-shadow: 0px 10px 15px 4px rgba(0,0,0,0.1)
+}
 .content {
   display: grid;
   grid-template-columns: 75% 25%;
@@ -10,6 +12,7 @@
 /* LEFT CONTENT */
 
 .left-content {
+  align-items: center;
   padding: 30px 20px;
   background-color: transparent;
   /* color: #e5e5e5; */
@@ -41,7 +44,7 @@
   background-color: beige;
   object-fit: cover;
   width: 300px;
-  box-shadow: 0px 10px 15px 4px rgba(0,0,0,0.1);
+  box-shadow: var(--box-shadow);
   /* border: 2px solid rgba(159, 160, 168, 0.5); */
 }
 
