@@ -23,6 +23,7 @@
 .slider-container {
   margin: 0 auto;
   width: 100%;
+  transform: scale(0.7);
 }
 
 .swiper {
@@ -44,12 +45,15 @@
   background-color: beige;
   object-fit: cover;
   width: 300px;
-  box-shadow: var(--box-shadow);
+  /* box-shadow: var(--box-shadow); */
   /* border: 2px solid rgba(159, 160, 168, 0.5); */
 }
 
 .swiper-pagination {
-  --swiper-pagination-bottom: -4px;
+  --swiper-pagination-bottom: 40px;
+  display: none;
+  
+  
 }
 
 .swiper-pagination-bullet {
