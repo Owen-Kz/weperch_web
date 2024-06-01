@@ -202,6 +202,9 @@ main{
     color: #333;
 }
 @media screen and (max-width:720px) and (max-width:900px) and (max-width:1200px) {
+    .navbar .navbar-right{
+        display: none;
+    }
     .inner_main{
         display: flex;
         flex-direction: column-reverse;
