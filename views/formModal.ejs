@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="/css/modal.css">
+
+<div class="modalContainer hidden" >
+    <div class="modal-content">
+    <%- include("renderForm")  %>
+</div>
+</div>
+
+
+<script>
+    const getModal  = document.querySelectorAll(".getModal")
+    const modalContainer = document.querySelector(".modalContainer")
+  
+
+    getModal.forEach(buttons =>{
+        
+        buttons.addEventListener("click", function() {
+    var closeModal = document.querySelector(".closeModal")
+
+            modalContainer.classList.toggle("hidden")
+        
+        })
+    })
+    modalContainer.addEventListener('click', function(event) {
+  // Check if the click is outside the modal content
+  const modalContent = document.querySelector('.modal-content');
+  
+  // If the click target is not the modal content or its children, close the modal
+  if (!modalContent.contains(event.target)) {
+    modalContainer.classList.toggle("hidden")
+
+  }
+});
+
+   
+</script>

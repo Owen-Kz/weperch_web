@@ -1,7 +1,8 @@
 const express = require("express");
 
 const router = express.Router();
-const bodyParser = require("body-parser")
+const bodyParser = require("body-parser");
+const explorePage = require("../controllers/explorepage");
  
 
 // router.use(express.json())
@@ -10,10 +11,9 @@ const bodyParser = require("body-parser")
 router.get("/", (req,res) =>{    
     res.render("welcome")
 }) 
- 
-router.get("/test", (req,res) =>{
-    res.render("test")
-})
+
+router.get("/explore", explorePage)
+
 
 
 

@@ -25,28 +25,12 @@
     <!-- <link rel="stylesheet" href="/css/general.css"> -->
     <link rel="stylesheet" href="/css/landing.css">
     <link rel="stylesheet" href="/css/slider.css">
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/png">
 </head>
 <body > 
+<%-include("navbar")  %>
+<%- include("formModal") %>
   <main class="body">
-    <!-- start navbar  -->
-    <div class="navbar bg-light">
-      <div class="navbar-left">
-        <div class="logoContainer">
-          <img src="/assets/logo.png" alt="weperch_logo">
-          <div class="logo_text">Weperch</div>
-        </div>
-      </div>
-
-      <div class="navbar-right">
-        <div class="buttonsContainer">
-          <a href="#">Become a Seller</a>
-          <button class="btn bg-dark">Login</button>
-          <button class="btn bg-dark">Sign up</button>
-        </div>
-      </div>
-      
-    </div>
-    <!-- navbarEnd  -->
 
     <div class="layers layerOne" id="layerOne">
         <div class="inner_main">
@@ -259,6 +243,24 @@
 <div class="layers layerthree" id="layerThree">
   <div class="inner_main">
 
+
+    <!-- start left slider contaier  -->
+      <div class="inner_content" style="display: flex; align-items: center; justify-content: center;" id="formPlaceholder">
+         <%- include("renderForm") %>
+      </div>
+
+      <!-- Start left  -->
+      <div class="inner_content_right">
+        <div class="right_content_inner">
+          <div class="header_text">
+            Dive into immersive wonder.
+          </div>
+        </div>
+      </div>
+</div>
+      <!-- End left  -->
+
+  
       <!-- start footer  -->
       <div class="inner_footer" >
         <a href="#layerTwo" class="link-item">
@@ -276,15 +278,19 @@
           </a>
       </div>
       <!-- End footer  -->
+       
   </div>
 
 </div>
 <!-- end layer 3  -->
   </main>
-
+  <script src="/js/jquery.min.js"></script>
     <script src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js'></script>
     <script src="/js/slider.js"></script>
     <script src="/js/scroll.js"></script>
     <script src="/js/welcome.js"></script>
+    <script src="/js/renderForm.js"></script>
+
+
 </body>
 </html>
